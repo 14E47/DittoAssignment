@@ -1,0 +1,10 @@
+{% extends 'subscribers/base.html' %}
+
+{% block content %}
+    <h2>Subscribe</h2>
+    <form method="POST" action="/subscribe/" class="post-form">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-default">Submit</button>
+    </form>
+{% endblock %}
